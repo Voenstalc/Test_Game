@@ -9,6 +9,8 @@ public class Data : MonoBehaviour
     public static int Money = 0;
     public static int dopMoney = 1;
     public static int needMoney = 10;
+    public static int AutoMoney = 0;
+    public static int NeedAutoMoney = 100;
     public GameObject[] _Banana_Spavns = { };
     public static GameObject[] Banana_Spavns = { };
 
@@ -23,6 +25,8 @@ public class Data : MonoBehaviour
         PlayerPrefs.SetInt("Money", Money);
         PlayerPrefs.SetInt("dopMoney", dopMoney);
         PlayerPrefs.SetInt("needMoney", needMoney);
+        PlayerPrefs.SetInt("AutoMoney", AutoMoney);
+        PlayerPrefs.SetInt("NeedAutoMoney", NeedAutoMoney);
         PlayerPrefs.Save();
         Debug.Log("Game data saved!");
     }
@@ -31,6 +35,8 @@ public class Data : MonoBehaviour
         Money = PlayerPrefs.GetInt("Money");
         dopMoney = PlayerPrefs.GetInt("dopMoney");
         needMoney = PlayerPrefs.GetInt("needMoney");
+        AutoMoney = PlayerPrefs.GetInt("AutoMoney");
+        NeedAutoMoney = PlayerPrefs.GetInt("NeedAutoMoney");
     }
     
 }
