@@ -72,6 +72,38 @@ public class Main : MonoBehaviour
             SceneManager.LoadScene("2");
         }
     }
+    public void LVL_3()
+    {
+        if (Data.Money >= 500)
+        {
+            Data.Money = 0;
+            Data.dopMoney = 15;
+            Data.needMoney = 20;
+            PlayerPrefs.SetInt("Money", Data.Money);
+            PlayerPrefs.SetInt("dopMoney", Data.dopMoney);
+            PlayerPrefs.SetInt("needMoney", Data.needMoney);
+            PlayerPrefs.SetInt("AutoMoney", Data.AutoMoney);
+            PlayerPrefs.SetInt("NeedAutoMoney", Data.NeedAutoMoney);
+            PlayerPrefs.Save();
+            SceneManager.LoadScene("3");
+        }
+    }
+    public void LVL_4()
+    {
+        if (Data.Money >= 500)
+        {
+            Data.Money = 0;
+            Data.dopMoney = 25;
+            Data.needMoney = 20;
+            PlayerPrefs.SetInt("Money", Data.Money);
+            PlayerPrefs.SetInt("dopMoney", Data.dopMoney);
+            PlayerPrefs.SetInt("needMoney", Data.needMoney);
+            PlayerPrefs.SetInt("AutoMoney", Data.AutoMoney);
+            PlayerPrefs.SetInt("NeedAutoMoney", Data.NeedAutoMoney);
+            PlayerPrefs.Save();
+            SceneManager.LoadScene("4");
+        }
+    }
     public void Monkey()
     {
         Data.Money += 10000000;
@@ -95,5 +127,9 @@ public class Main : MonoBehaviour
             tm_1.text = Data.needMoney.ToString();
             tm_2.text = Data.NeedAutoMoney.ToString();
         }
+    }
+    public void Exit()
+    {
+        Application.Quit();
     }
 }
